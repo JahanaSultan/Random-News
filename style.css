@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 a{
-  color: rgb(22, 15, 45);
+  color: #1C273A;
 }
 
 .padding-x {
@@ -21,36 +21,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  background-color: rgb(22, 15, 45);
+  background-color: #1C273A;
   color: white;
 }
-.search {
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-  height: 45px;
-}
-.search input {
-  width: 80%;
-  height: 100%;
-  outline: 0;
-  border: 0;
-  border-radius: 100vmax 0 0 100vmax;
-  padding: 20px;
-  font-size: 18px;
-}
-.search button {
-  width: 20%;
-  height: 100%;
-  border-radius: 0 100vmax 100vmax 0;
-  border: 0;
-  cursor: pointer;
-  font-size: 25px;
-  color: rgb(22, 15, 45);
-}
+
 ::placeholder {
   font-size: 18px;
-  color: rgb(22, 15, 45);
+  color: #1C273A;
   opacity: 0.6;
 }
 select {
@@ -69,7 +46,7 @@ select {
   height: 60px;
   border-radius: 50%;
   background-color: white;
-  color: rgb(22, 15, 45);
+  color: #1C273A;
 }
 .main {
   display: flex;
@@ -85,8 +62,10 @@ select {
   transition: 0.5s;
 }
 .card:hover {
-  /* transform: translateY(-5px); */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 
+  0px 50px 100px -20px, 
+  rgba(0, 0, 0, 0.3) 
+  0px 30px 60px -30px;
 }
 .card .photo {
   height: 45%;
@@ -131,6 +110,21 @@ select {
     text-align: justify;
 }
 
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  background-color: #1C273A;
+  display: none;
+}
+.display{
+  display: flex!important;
+}
 @media screen and (max-width: 1026px) {
 .card{
   width: 32%;

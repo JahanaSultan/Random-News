@@ -1,12 +1,21 @@
 const box=document.querySelector(".main")
 const select=document.getElementById('lang')
+const loading=document.querySelector('.loading')
+
+
+const hideLoading=()=>{
+       setTimeout(()=>{
+        loading.classList.remove('display')
+    },3000) 
+}
 
 const getinfo=(l)=>{
 box.innerHTML=''
 fetch(`https://api.currentsapi.services/v1/latest-news?language=${l}&apiKey=6P-DHWfKzvWGgieVHWKT_p-vjU0GwP89bFB4FJf50Ia391OY`)
 .then(res=>res.json())
 .then(data=>{
-data.news.map(e=>{
+    hideLoading()
+    data.news.map(e=>{
     box.innerHTML+=''
     box.innerHTML+=` <div class="card">
 <div class="photo">
