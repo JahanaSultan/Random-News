@@ -2,6 +2,9 @@ const box=document.querySelector(".main")
 const select=document.getElementById('lang')
 const loading=document.querySelector('.loading')
 
+const displayLoading=()=>{
+    loading.classList.add('display')
+}
 
 const hideLoading=()=>{
        setTimeout(()=>{
@@ -10,6 +13,7 @@ const hideLoading=()=>{
 }
 
 const getinfo=(l)=>{
+displayLoading()
 box.innerHTML=''
 fetch(`https://api.currentsapi.services/v1/latest-news?language=${l}&apiKey=6P-DHWfKzvWGgieVHWKT_p-vjU0GwP89bFB4FJf50Ia391OY`)
 .then(res=>res.json())
